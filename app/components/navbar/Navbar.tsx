@@ -1,0 +1,30 @@
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import SearchFilters from './SearchFilters'
+import UserNav from './UserNav'
+import AdddPropertyButton from './AdddPropertyButton'
+
+const Navbar = () => {
+  return (
+    <nav className='w-full fixed top-0 left-0 py-4 border-b bg-white z-10'>
+        <div className='max-w-375 mx-auto px-6'>
+            <div className='flex justify-between items-center'>
+                <Link href="/">
+                    <Image src="/logo.png" alt='DjangoBnb' width={100} height={32} />
+                </Link>
+
+                <div className='flex space-x-6'>
+                    <SearchFilters />
+                </div>
+                <div className='flex items-center space-x-6'>
+                    <AdddPropertyButton />
+                    <UserNav />
+                </div>
+            </div>
+        </div>
+    </nav>
+  )
+}
+
+export default Navbar
