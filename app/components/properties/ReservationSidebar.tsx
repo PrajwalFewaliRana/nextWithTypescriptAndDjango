@@ -15,7 +15,7 @@ const ReservationSidebar = () => {
           <option value="">4</option>
         </select>
       </div>
-      <div className="w-full mb-6 py-6 text-center text-white  bg-[rgb(var(--airbnb))] hover:bg-[rgb(var(--airbnb-dark))] rounded-xl">
+      <div className="w-full mb-6 py-6 text-center text-white  airbnb rounded-xl">
         Book
       </div>
       <div className="mb-4 flex justify-between align-center">

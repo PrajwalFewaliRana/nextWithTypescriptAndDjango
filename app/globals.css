@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .airbnb {
+    background-color: rgb(255, 56, 92);
+  }
+  .airbnb:hover {
+    background-color: rgb(213, 0, 39);
+  }
+}
 
-
-:root{
+/* :root{
   --airbnb: 255,56,92;
   --airbnb-dark: 213,0,39;
-}
+} */
