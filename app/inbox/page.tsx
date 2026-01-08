@@ -1,9 +1,13 @@
 import React from "react";
+import Conversations from "../components/inbox/Conversations";
 
 const InboxPage = () => {
   return (
-    <main className="max-w-375 mx-auto px-6 pb-6">
+    <main className="max-w-375 mx-auto px-6 pb-6 space-y-4">
       <h1 className="my-6 text-2xl">My properties</h1>
+      <Conversations />
+      <Conversations />
+      <Conversations />
     </main>
   );
 };

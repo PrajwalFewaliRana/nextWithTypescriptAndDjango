@@ -7,6 +7,9 @@
   .airbnb:hover {
     background-color: rgb(213, 0, 39);
   }
+  .airbnb-dark{
+    color: rgb(213,0,39);
+  }
 }
 
 /* :root{
