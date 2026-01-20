@@ -1,12 +1,31 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import PropertyListItem from "./PropertyListItem";
+import apiService from "@/app/services/apiService";
+export type PropertyType ={
+  id:string;
+  title:string;
+  image_url:string;
+  price_per_night:number;
+}
 
 const PropertyList = () => {
+  const [properties,setProperties] = useState<PropertyType[]>([]);
+  const getProperties = async () => {
+    const tempProperties = await apiService.get('/api/properties/')
+    setProperties(tempProperties.data)
+  };
+
+  useEffect(() => {
+    getProperties();
+  }, []);
   return (
     <>
-      <PropertyListItem />
-      <PropertyListItem />
-      <PropertyListItem />
+    {properties.map((property)=>{
+      return(
+        <PropertyListItem key={property.id} property={property} />
+      )
+    })}
     </>
   );
 };
