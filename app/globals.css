@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+
 @layer utilities {
   .airbnb {
     background-color: rgb(255, 56, 92);
